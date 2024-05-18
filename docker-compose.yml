@@ -7,8 +7,6 @@ x-base_elvis: &base_elvis
   build:
     context: .
     dockerfile: Dockerfile
-    args:
-      - GITHUB_TOKEN=${GITHUB_TOKEN:?GITHUB_TOKEN is required}
   environment:
     - Rails_ENV=kubernetes
     - STORAGE_ACCOUNT=${STORAGE_ACCOUNT:-local}
